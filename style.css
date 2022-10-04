@@ -280,7 +280,7 @@ section:last-child {
     }
 	
 	.noprint {
-      visibility: collapse;
+		display: none;
 	}
 	
 	#contactDetails ul li a, a[href^=tel] {
