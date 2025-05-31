@@ -19,13 +19,13 @@
 	<div id="cv" class="instaFade">
 		<div class="mainDetails">
 			<div id="headshot" class="quickFade">
-				<img src="img/headshot@neguim.png" alt="Rodrigo Nantes" />
+				<img id="head-img" src="img/headshot@neguim.png" alt="Rodrigo Nantes" />
 			</div>
 			
 			<div id="name">
 				<h1 class="quickFade delayTwo">Rodrigo Nantes</h1>
 				<h3 class="quickFade delayThree">Software Developer</h3>
-				<h3 id="age" class="quickFade delayThree"> - </h3>
+				<h3 id="my-age" class="quickFade delayThree"> - </h3>
 				<h4 class="quickFade delayThree noprint">
 						<a href="index.html">Show resume in Portuguese</a>
 				</h4>
@@ -60,11 +60,11 @@
 					</div>
 					
 					<div class="sectionContent">
-						<p>I always had a special interest in the IT area for being a powerful tool for change. I enjoy creating new professional relationships, acquiring experience and developing ideas in group.</p>
-						
-						<p>I believe in the development of multidisciplinary skills, and that diversity is key to the creativity. I look forward to broadening  my knowledge, diversifying it in each new opportunity. Satisfies me to see challenging projects growing and being well-driven through organization, agility and dedication. </p>
-						
-						<p>My goal is to acquire diverse experiences, increasing my knowledge, contributing to the projects while I grow up professionally. I seek to make a difference, and that these projects I work in also be relevant on its purpose or for society. </p>
+						<p>I always had a special interest in the IT area for being a powerful tool where anything can be developed, given the creativity and the efforts needed. I enjoy creating new professional relationships, growing and developing ideas in group. </p>
+
+						<p>I believe in multidisciplinary skills as a way to build something better, and that diversity is something important and key to the creativity. I look forward to broaden my knowledge, diversifying it in each new opportunity. Satisfies me to see challenging projects growing and being well-driven through organization, agility and dedication. My goal is to acquire diverse experiences, increasing my knowledge, contributing to the projects while I grow up professionally. </p>
+
+						<p>I seek to make a difference, and that these projects I work in also be relevant on its purpose or for society. </p>
 					</div>
 					
 				</article>
@@ -78,8 +78,8 @@
 				<div class="sectionContent">
 					<article>
 						<p>Advanced: Java (EE, EJB, web services);</p>
-						<p>Intermediate: Angular 2+, Android (Java);</p>
-						<p>Basic: Web development (CSS, HTML, Javascript).</p>
+						<p>Intermediate: Web development (CSS, HTML, Javascript);</p>
+						<p>Basic: Angular 2+, Android (Java);</p>
 						<p>Side knowledge: Shell scripting, Ant, Weblogic, SQL (OracleDB).</p>
 					</article>
 				</div>
@@ -118,12 +118,20 @@
 				</div>
 				
 				<div class="sectionContent">
-					<!--
+					<article>
+						<p><h3>Software Developer - PrimeIT -> CGI -> ING</h3></p>
+						<p class="subDetails">Since Oct/2023</p>
+						<p class="subDetails2">Tech stack: Java 8, J2EE, JSP, Javascript, Dojo Toolkit, Drools, Oracle.</p>
+						<p>Project: Working on the banking area, for a Dutch bank.
+						   <br/>
+						   Tasks: Java web development and maintenance, involving J2EE, web services, EJB, JMS, Javascript (Dojo), Drools, Oracle DB and others; ownership of components and modules of the system, handling the fixes, lifecycle, vulnerabilities, upgrades and releases; on-call support and follow-up for deployments.
+						</p>
+					</article>
+					
 					<article>
 						<p><h3>Software Consultant - Aubay</h3></p>
-						<p class="subDetails">Jun/2023 - Today</p>
+						<p class="subDetails">Jun/2023 - Oct/2023</p>
 					</article>
-					-->
 					
 					<article>
 						<p><h3>Software Analyst/Developer - CI&T (formerly CINQ Technologies)</h3></p>
@@ -181,7 +189,7 @@
 			
 			<footer>
 				<p class="subDetails">
-					Last updated on: Sep/2023.
+					Last updated on: Apr/2025.
 				</p>
 			</footer>
 			
@@ -197,7 +205,10 @@
 		  return age;
 		} 
 		var bday = new Date('1995-09-21');
-		document.getElementById('age').innerHTML = calculateAge(bday) + ' years old';
+		document.getElementById('my-age').innerHTML = calculateAge(bday) + ' years old';
+		
+		//import { HEADSHOT_IMG } from './const';
+		//document.getElementById('head-img').src = HEADSHOT_IMG;
 	</script>
 
 	<script type="text/javascript">

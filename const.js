@@ -1,3 +1,3 @@
 
 
-const headshotImg="headshot@neguim.png"
+export const headshotImg="img/headshot@neguim.png";
