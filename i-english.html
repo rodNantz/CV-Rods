@@ -29,6 +29,13 @@
 				<h4 class="quickFade delayThree noprint">
 						<a href="index.html">Show resume in Portuguese</a>
 				</h4>
+				<h4 class="quickFade delayThree noprint">
+					Cover letter
+					<label class="switch">
+						<input id="clCheckbox" type="checkbox" onclick="hideForCL(this)">
+						<span class="slider"></span>
+					</label>
+				</h4>
 			</div>
 			
 			<div id="contactDetails" class="quickFade delayFour">
@@ -53,7 +60,7 @@
 		</div>
 		
 		<div id="mainArea" class="quickFade delayFive">
-			<section>
+			<section class="hideOnCL">
 				<article>
 					<div class="sectionTitle">
 						<h1>Profile</h1>
@@ -98,13 +105,17 @@
 						
 						<p>
 						English - Advanced level
-						<ul class="subDetails"><li>Course: InFlux Language School, 2013-2015, completed on 2 and a half years. </li></ul>
-						<ul class="subDetails"><li>Proficiency tests: TOEFL (543) and TOEIC (885). </li></ul>
+						<div class="hideOnCL">
+							<ul class="subDetails"><li>Course: InFlux Language School, 2013-2015, completed on 2 and a half years. </li></ul>
+							<ul class="subDetails"><li>Proficiency tests: TOEFL (543) and TOEIC (885). </li></ul>
+						</div>
 						</p>
 						
 						<p>
 						French - Intermediate level
-						<ul class="subDetails"><li>Course: French as Foreign Language at Celin - from 2015 to 2019, reaching the Intermediaire 3 (B1) level. </li></ul>
+						<div class="hideOnCL">
+							<ul class="subDetails"><li>Course: French as Foreign Language at Celin - from 2015 to 2019, reaching the Intermediaire 3 (B1) level. </li></ul>
+						</div>
 						</p>
 					</article>
 				</div>
@@ -123,8 +134,10 @@
 						<p class="subDetails">Since Oct/2023</p>
 						<p class="subDetails2">Tech stack: Java 8, J2EE, JSP, Javascript, Dojo Toolkit, Drools, Oracle, Agile</p>
 						<p>Project: Working on the banking area, for a Dutch bank.
-						   <br/>
-						   Tasks: Java web development and maintenance, involving J2EE, web services, EJB, JMS, Javascript (Dojo Toolkit), Drools, Oracle DB and others; ownership of components and modules of the system, handling the fixes, lifecycle, vulnerabilities, upgrades and releases; facilitating meetings as temporary Scrum master in his absence, in an Agile environment; on-call support and follow-up for deployments.
+						</p>
+						<p class="hideOnCL">
+						     Tasks: Java web development and maintenance, involving J2EE, web services, EJB, JMS, Javascript (Dojo Toolkit), Drools, Oracle DB and others; ownership of components and modules of the system, handling the fixes, lifecycle, vulnerabilities, upgrades and releases; facilitating meetings as temporary Scrum master in his absence, in an Agile environment; on-call support and follow-up for deployments.
+						</p>
 						</p>
 					</article>
 					
@@ -138,15 +151,17 @@
 						<p class="subDetails">May/2016 - Jun/2017 (as Intern)</p>
 						<p class="subDetails">Jul/2017 - Mai/2023</p>
 						<p class="subDetails2">Tech stack: Java, EJB and REST Web Services. Also in touch with Weblogic, Ant Scripts, Mockito, NGTest, SVN, Oracle Cloud and Linux configuration management. </p>
-						<p>Project: Development and support on enterprise applications for international projects, mostly collaborating on Java, in a Fares Management system, used by the airline market.
-						   <br/>
-						   Tasks: Java server and client-side development and maintenance (J2EE, EJB, JMS, Swing, JavaFX, Oracle Stored Procedures call); internal REST APIs support and development; fix and improve build process (Ant scripts, CruiseControl server); maintaining DEV environments (Weblogic machines, SVN repository); task management on a project transitioning between Waterfall and Agile methodologies; facilitating the meetings for the tech lead on his absence periods; on-call incident support on selected weeks.
+						<p class="subDetails2">Project: Development and support on enterprise applications for international projects, mostly collaborating on Java, in a Fares Management system, used by the airline market.
 						</p>
-						<p>Other projects: internal system for a Telecom company (Java, AngularJS, Oracle); an API project for integrating HTML games with wallet endpoints (Java, Jetty). 
+						<p class="hideOnCL">
+						 Tasks: Java server and client-side development and maintenance (J2EE, EJB, JMS, Swing, JavaFX, Oracle Stored Procedures call); internal REST APIs support and development; fix and improve build process (Ant scripts, CruiseControl server); maintaining DEV environments (Weblogic machines, SVN repository); task management on a project transitioning between Waterfall and Agile methodologies; facilitating the meetings for the tech lead on his absence periods; on-call incident support on selected weeks.
+						</p>
+						<p class="hideOnCL">
+						   Other projects: internal system for a Telecom company (Java, AngularJS, Oracle); an API project for integrating HTML games with wallet endpoints (Java, Jetty). 
 						</p>
 					</article>
 					
-					<article>
+					<article class="hideOnCL">
 						<p><h3>Internship (Technical Support) - CELEPAR</h3></p>
 						<p class="subDetails">Nov/2014 - Apr/2016</p>
 						<p>Customer support and environment setup, mostly by configuring Linux machines.</p>
@@ -167,7 +182,7 @@
 						<p class="subDetails">Complete</p>
 						<p class="subDetails2 gringo">Technologist degree in <i>"Análise e Desenvolvimento de Sistemas"</i> at UFPR University, from 2013 to July/2017. </p>
 						
-						<p>My course's final paper was the development of a mobile application (using Android, Angular and Java REST services) to teach and guide the users on how to discard correctly solid residues, bringing awareness about the recycling chain of the focused city (Curitiba, Brazil). 
+						<p class="hideOnCL">My course's final paper was the development of a mobile application (using Android, Angular and Java REST services) to teach and guide the users on how to discard correctly solid residues, bringing awareness about the recycling chain of the focused city (Curitiba, Brazil). 
 						</p>
 					</article>
 					
@@ -177,7 +192,7 @@
 						<p>Oracle Certified Associate, Java SE 8 Programmer</p>
 					</article>
 					
-					<article>
+					<article class="hideOnCL">
 						<p><h2>Courses</h2><p>
 						<p class="subDetails">May/2023</p>
 						<p>Spring Boot 3, Spring 6 & Hibernate - Chad Darby (Luv2Code)</p>
@@ -207,6 +222,17 @@
 		var bday = new Date('1995-09-21');
 		document.getElementById('my-age').innerHTML = calculateAge(bday) + ' years old';
 		
+		document.getElementById("clCheckbox").defaultChecked = false;
+		
+		function hideForCL(clBox) {
+			console.log("hideForCL "+ clBox.checked);
+			var dispStyle = clBox.checked ? "none" : "block";
+			var divs = document.getElementsByClassName("hideOnCL");
+			for (var i = 0; i < divs.length; i++) {
+				divs[i].style.display = dispStyle;
+			}
+		}
+		
 		//import { HEADSHOT_IMG } from './const';
 		//document.getElementById('head-img').src = HEADSHOT_IMG;
 	</script>
@@ -215,7 +241,7 @@
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 	</script>
-
+	
 	<script type="text/javascript">
 		var pageTracker = _gat._getTracker("UA-3753241-1");
 		pageTracker._initData();

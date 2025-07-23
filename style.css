@@ -45,6 +45,63 @@ br {
 	text-align: center;
 }
 
+
+.hideOnCL {
+	
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #cf8a05;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #cf8a05;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+
 /* fim rod */
 
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
@@ -60,14 +117,14 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 display:block;
 }
 
-html, body {background: #181818; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 16px; color: #222;}
+html, body {background: #181818; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 14px; color: #222;}
 
 .clear {clear: both;}
 
 p {
-	font-size: 1em;
+	font-size: 0.9em;
 	line-height: 1.4em;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	color: #444;
 }
 
@@ -79,7 +136,7 @@ p {
 }
 
 .mainDetails {
-	padding: 25px 35px;
+	padding: 15px 35px;
 	border-bottom: 2px solid #cf8a05;
 	background: #ededed;
 }
@@ -160,7 +217,7 @@ section:first-child {
 }
 
 section:last-child {
-	padding: 20px 0 10px;
+	padding: 5px 0 10px;
 }
 
 .sectionTitle {
@@ -255,11 +312,11 @@ section:last-child {
 
 @media all and (max-width: 480px) {
 	.mainDetails {
-		padding: 15px 15px;
+		padding: 10px 15px;
 	}
 	
 	section {
-		padding: 15px 0 0;
+		padding: 10px 0 0;
 	}
 	
 	#mainArea {
