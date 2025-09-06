@@ -21,16 +21,23 @@
 	<div id="cv" class="instaFade">
 		<div class="mainDetails">
 			<div id="headshot" class="quickFade">
-				<img src="img/headshot@neguim.png" alt="Rodrigo Nantes" />
+				<img id="head-img" src="img/headshot@neguim.png" alt="Rodrigo Nantes" />
 			</div>
 			
 			<div id="name">
 				<h1 class="quickFade delayTwo">Rodrigo Nantes</h1>
 				<!-- <h3 class="quickFade" delayThree">Análise e Desenvolvimento de Sistemas</h3> -->
 				<h3 class="quickFade delayThree">Análise e Desenvolvimento de Sistemas</h3>
-				<h3 id="age" class="quickFade delayThree"> - </h3>
+				<h3 id="my-age" class="quickFade delayThree"> - </h3>
 				<h4 class="quickFade delayThree noprint">
 					<a href="i-english.html">Show resume in English</a>
+				</h4>
+				<h4 class="quickFade delayThree noprint">
+					Cover letter
+					<label class="switch">
+						<input id="clCheckbox" type="checkbox" onclick="hideForCL(this)">
+						<span class="slider"></span>
+					</label>
 				</h4>
 			</div>
 			
@@ -57,7 +64,7 @@
 		
 		
 		<div id="mainArea" class="quickFade delayFive">
-			<section>
+			<section class="hideOnCL">
 				<article>
 					<div class="sectionTitle">
 						<h1>Perfil</h1>
@@ -82,9 +89,9 @@
 				<div class="sectionContent">
 					<article>
 						<p>Avançado: Java (EE, EJB, web services);</p>
-						<p>Intermediário: Angular 2+, Android (Java);</p>
-						<p>Básico: Web em geral (CSS, HTML e Javascript).</p>
-						
+						<p>Intermediário: Web development (CSS, HTML, Javascript);</p>
+						<p>Básico: Angular 2+, Android (Java);</p>
+
 						<p>Conhecimentos paralelos: Shell scripting, Ant, Weblogic, SQL (OracleDB).</p>
 					</article>
 				</div>
@@ -101,13 +108,17 @@
 					<article>
 						<p>
 						Inglês - Avançado
-						<ul class="subDetails"><li>Cursos: InFlux Centro de Idiomas, 2013-2015, com a duração completa de dois anos e meio. </li></ul>
-						<ul class="subDetails"><li>Testes de proeficiência: TOEFL (543) e TOEIC (885). </li></ul>
+						<div class="hideOnCL">
+							<ul class="subDetails"><li>Cursos: InFlux Centro de Idiomas, 2013-2015, com a duração completa de dois anos e meio. </li></ul>
+							<ul class="subDetails"><li>Testes de proeficiência: TOEFL (543) e TOEIC (885). </li></ul>
+						</div>
 						</p>
 						
 						<p>
 						Francês - Intermediário
-						<ul class="subDetails"><li> Cursos: FLE/Celin - cursado de 2015 a 2019, atingindo o nível Intermediário 3 (B1). </li></ul>
+						<div class="hideOnCL">
+							<ul class="subDetails"><li> Cursos: FLE/Celin - cursado de 2015 a 2019, atingindo o nível Intermediário 3 (B1). </li></ul>
+						</div>
 						</p>
 					</article>
 				</div>
@@ -126,16 +137,16 @@
 						<p class="subDetails">Desde Out/2023</p>
 						<p class="subDetails2">Tech stack: Java 8, J2EE, JSP, Javascript, Dojo Toolkit, Drools, Oracle, Agile.</p>
 						<p>Project: A trabalhar na área da banca, para cliente holandês no modelo nearshore, a partir de Portugal.
-						   <br/>
-						   Tarefas: Desenvolvimento e manutenção em Java web, J2EE, web services, EJB, JMS, Javascript (Dojo Toolkit), Drools, Oracle DB entre outros; responsabilidade na gestão de componentes 
-						   
-						   ownership of components and modules of the system, handling the fixes, lifecycle, vulnerabilities, upgrades and releases; facilitating meetings as temporary Scrum master in his absence, in an Agile environment; on-call support and follow-up for deployments.
+						</p>
+						<p class="hideOnCL">
+						   Tarefas: Desenvolvimento e manutenção em Java web, J2EE, web services, EJB, JMS, Javascript (Dojo Toolkit), Drools, Oracle DB entre outros; responsabilidade na gestão de componentes e móduloss do sistema, lidando com correções, ciclo de vida, vulnerabilidades, atualizações e releases; facilitar reuniões na ausência do Scrum master; suporte on-call e follow-up para deployments.
+						</p>
 						</p>
 					</article>
 					
 					<article>
 						<p><h3>Software Consultant - Aubay</h3></p>
-						<p class="subDetails">Jun/2023 - Oct/2023</p>
+						<p class="subDetails">Jun/2023 - Out/2023</p>
 					</article>
 
 					<article>
@@ -143,16 +154,16 @@
 						<p class="subDetails">Mai/2016 - Jun/2017 (Estágio)</p>
 						<p class="subDetails">Jul/2017 - Atual</p>
 						<p class="subDetails2">Tech stack: Java, EJB, REST Web Services. Tive contato também com Weblogic, Ant Scripts, Mockito, NGTest, SVN, Oracle Cloud e Linux. </p>
-						<p>Projeto: desenvolvimento e suporte a aplicações corporativas em projetos internacionais, majoritariamente em Java, para um software de gerenciamento de tarifas do mercado de aviação.
+						<p class="subDetails2">Projeto: desenvolvimento e suporte a aplicações corporativas em projetos internacionais, majoritariamente em Java, para um software de gerenciamento de tarifas do mercado de aviação.
 							<br/>
 							Tasks: Java, manutenção e desenvolvimento server e client-side (J2EE, EJB, JMS, Swing, JavaFX, Oracle Stored Procedures call); desenvolvimento e apoio a REST APIs internas; desenvolvimento e melhoria no processo de build (Ant scripts, CruiseControl server); manter ambientes de DEV (Weblogic app server machine, SVN repository); gerenciamento de tarefas em um projeto transicionando entre Waterfall e Agile; facilitar reuniões na ausência do tech lead; atendimento de incidentes por telefone em sobreaviso em certas semanas.
 						</p>
-						<p>Outros projetos: ferramenta interna para empresa de Telecom (Java, AngularJS, Oracle); uma API para integração de jogos HTML com APIs de carteira (Java, Jetty). 
-						</p>
-						
+						<p class="hideOnCL">
+							Outros projetos: ferramenta interna para empresa de Telecom (Java, AngularJS, Oracle); uma API para integração de jogos HTML com APIs de carteira (Java, Jetty). 
+						</p>	
 					</article>
 					
-					<article>
+					<article class="hideOnCL">
 						<p><h3>Estágio (Suporte) - CELEPAR</h3></p>
 						<p class="subDetails">Nov/2014 - Abr/2016</p>
 						<p>Atendimento e suporte aos usuários, principalmente trabalhando com configuração de máquinas Linux.</p>
@@ -173,7 +184,7 @@
 						<p class="subDetails">Completo</p>
 						<p class="subDetails2 gringo">Curso superior de Tecnologia em Análise e Desenvolvimento de Sistemas – UFPR, desde o 1º semestre de 2013, 
 						concluído em Julho/2017.</p>
-						<p>Meu trabalho de conclusão desse curso foi um aplicativo (usando Android, Angular e Java REST services) para informação e descarte correto de resíduos sólidos,
+						<p class="hideOnCL">Meu trabalho de conclusão desse curso foi um aplicativo (usando Android, Angular e Java REST services) para informação e descarte correto de resíduos sólidos,
 						focado no Meio Ambiente e para a região de Curitiba.</p>
 					</article>
 					
@@ -183,11 +194,17 @@
 						<p>Oracle Certified Associate, Java SE 8 Programmer</p>
 					</article>
 					
-					<article>
+					<article class="hideOnCL">
 						<p><h2>Cursos</h2><p>
 						<p class="subDetails">Mai/2023</p>
 						<p>Spring Boot 3, Spring 6 & Hibernate - Chad Darby (Luv2Code)</p>
 					</article>
+					
+					<article class="hideOnCL">
+						<p><h2>Interesses</h2><p>
+						<p>Angular / Architecture / Arduino / Django / Docker / Kotlin / Microservices / ML / Python / Scala</p>
+					</article>
+				</div>
 				</div>
 				<div class="clear"></div>
 			</section>
@@ -195,7 +212,7 @@
 			
 			<footer>
 				<p class="subDetails">
-					Última atualização: Jun/2025.
+					Última atualização: Set/2025.
 				</p>
 			</footer>
 			
@@ -211,7 +228,18 @@
 		  return age;
 		} 
 		var bday = new Date('1995-09-21');
-		document.getElementById('age').innerHTML = "Idade: " + calculateAge(bday);
+		document.getElementById('my-age').innerHTML = "Idade: " + calculateAge(bday) + " anos";
+
+		document.getElementById("clCheckbox").defaultChecked = false;
+		
+		function hideForCL(clBox) {
+			console.log("hideForCL "+ clBox.checked);
+			var dispStyle = clBox.checked ? "none" : "block";
+			var divs = document.getElementsByClassName("hideOnCL");
+			for (var i = 0; i < divs.length; i++) {
+				divs[i].style.display = dispStyle;
+			}
+		}
 	</script>
 
 	<script type="text/javascript">
